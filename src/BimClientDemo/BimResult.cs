@@ -5,6 +5,11 @@
         public T response { get; set; }
     }
 
+    public class DownloadResponse
+    {
+        public int result { get; set; }
+    }
+
     public class LoginResponse
     {
         public string result { get; set; }

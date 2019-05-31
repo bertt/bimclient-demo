@@ -37,6 +37,7 @@
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbServer = new System.Windows.Forms.TextBox();
+            this.btnDownload = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -120,11 +121,22 @@
             this.tbServer.Size = new System.Drawing.Size(612, 22);
             this.tbServer.TabIndex = 8;
             // 
+            // btnDownload
+            // 
+            this.btnDownload.Location = new System.Drawing.Point(334, 255);
+            this.btnDownload.Name = "btnDownload";
+            this.btnDownload.Size = new System.Drawing.Size(137, 67);
+            this.btnDownload.TabIndex = 9;
+            this.btnDownload.Text = "Download";
+            this.btnDownload.UseVisualStyleBackColor = true;
+            this.btnDownload.Click += new System.EventHandler(this.BtnDownload_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDownload);
             this.Controls.Add(this.tbServer);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbPassword);
@@ -152,6 +164,7 @@
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbServer;
+        private System.Windows.Forms.Button btnDownload;
     }
 }
 

@@ -12,7 +12,7 @@ namespace BimClientDemo
             dynamic par = new ExpandoObject();
             par.username = username;
             par.password = password;
-            return GetBody(token, "AuthInterface", "login",par);
+            return GetBody(token, "AuthInterface", "login", par);
         }
 
         // login
@@ -29,6 +29,20 @@ namespace BimClientDemo
             par.onlyTopLevel = false;
             par.onlyActive = false;
             return GetBody(token, "ServiceInterface", "getAllProjects", par);
+        }
+
+        public static StringContent GetDownload(string token, int[] roids, int serializerOid = 2949158, string query = "{\"includeAllFields\":true}", bool streaming = false, bool showOwn = true, bool sync = false, bool zip = false)
+        {
+            dynamic par = new ExpandoObject();
+            par.roids = roids;
+            par.query = query;
+            par.serializerOid = serializerOid;
+            par.streaming = streaming;
+            par.showOwn = showOwn;
+            par.sync = sync;
+            par.zip = zip;
+
+            return GetBody(token, "ServiceInterface", "download", par);
         }
 
         private static StringContent GetBody(string token, string @interface, string method, ExpandoObject par)
