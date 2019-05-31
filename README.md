@@ -2,7 +2,7 @@
 
 Sample HTTP client for BIMserver (http://bimserver.org/)
 
-Demonstartion server used: https://thisisanexperimentalserver.com
+Demonstration server used: https://thisisanexperimentalserver.com
 
 Demonstrates:
 
